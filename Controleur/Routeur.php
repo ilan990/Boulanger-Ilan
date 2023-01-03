@@ -68,7 +68,7 @@ class Routeur {
 
                         // var_dump(session_status());
                     }else{
-                        var_dump(   $this->ctrlLogin->getAuth($pseudo, $password));
+                        var_dump(  'Identifiants Incorrect');
                     }
                 }
                 else if($_GET['action'] == 'getDeconnexion')

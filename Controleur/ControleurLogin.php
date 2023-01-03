@@ -35,7 +35,7 @@ class ControleurLogin
             // session_start();
         }
         else{
-            header("location:http://localhost/devoirRobertShopMake-Up/index.php?action=cnx1");
+            var_dump('Identifiants incorrect !');
         }
     }
     public function getDeconnexion()
