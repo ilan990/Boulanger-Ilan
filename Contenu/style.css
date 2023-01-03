@@ -16,7 +16,27 @@ body {
     background: black;
     font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
 }
+/*navbar*/
+.navbar-brand {
+    background-image: url("../IMG/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
 
+.navbar-nav .nav-item:hover {
+    background-color: rgba(180, 190, 203, 0.4);
+
+
+}
+/*background main*/
+.bg-main{
+    background-image: url("../IMG/bg-main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 
  /*Login*/

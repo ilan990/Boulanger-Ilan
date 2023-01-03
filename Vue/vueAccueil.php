@@ -1,15 +1,6 @@
-<?php $this->titre = "Mon Blog"; ?>
+<?php $this->titre = "Boulanger'Ilan - "; ?>
 
-<?php foreach ($billets as $billet):
-    ?>
-    <article>
-        <header>
-            <a href="<?= "index.php?action=billet&id=" . $billet['id'] ?>">
-                <h1 class="titreBillet"><?= $billet['titre'] ?></h1>
-            </a>
-            <time><?= $billet['date'] ?></time>
-        </header>
-        <p><?= $billet['contenu'] ?></p>
-    </article>
-    <hr />
-<?php endforeach; ?>
+<div style="color: #c38650" class="bg-main vh-100 d-flex flex-column justify-content-end align-items-center">
+    <p style="font-size: 4em;font-family: 'Andada Pro', serif;"><b>Plus qu'une boulangerie</b></p><br/>
+    <p style="font-size: 2em;font-family: 'Andada Pro', serif;"><b>Un art de vie à la française</b></p>
+</div>
