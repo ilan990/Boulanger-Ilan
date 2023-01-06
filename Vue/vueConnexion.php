@@ -7,8 +7,8 @@
 
         </div>
         <form action="index.php?action=getAuth" method="post">
-            <input type="text" id="login" class="fadeIn second" name="pseudo" placeholder="login">
-            <input type="password" id="password" class="fadeIn third" name="mdp" placeholder="password">
+            <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
             <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
 

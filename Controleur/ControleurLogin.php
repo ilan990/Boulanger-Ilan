@@ -35,7 +35,7 @@ class ControleurLogin
             // session_start();
         }
         else{
-            var_dump('Identifiants incorrect !');
+            header("location:./index.php?action=connexion");
         }
     }
     public function getDeconnexion()

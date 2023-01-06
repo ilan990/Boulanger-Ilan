@@ -9,6 +9,8 @@ class Routeur {
 
     private $ctrlAccueil;
     private $ctrlBillet;
+    private $ctrlProduit;
+    private $ctrlLogin;
 
     public function __construct() {
         $this->ctrlAccueil = new ControleurAccueil();
@@ -53,23 +55,16 @@ class Routeur {
                 else if($_GET['action']=='getAuth')
                 {
 
-                    if(!isset($_SESSION)){
+                    if(!isset($_SESSION))
+                    {
                         session_start();
-
                     }
 
-                    $pseudo = $this->getParametre($_POST, 'pseudo');
+                    $pseudo = $this->getParametre($_POST, 'username');
+                    $password = $this->getParametre($_POST, 'password');
 
-                    $password = $this->getParametre($_POST, 'mdp');
-                    if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
+                    $this->ctrlLogin->getAuth($pseudo, $password);
 
-                        $this->ctrlLogin->getAuth($pseudo, $password);
-
-
-                        // var_dump(session_status());
-                    }else{
-                        var_dump(  'Identifiants Incorrect');
-                    }
                 }
                 else if($_GET['action'] == 'getDeconnexion')
                 {
