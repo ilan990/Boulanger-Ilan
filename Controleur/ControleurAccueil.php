@@ -9,6 +9,7 @@ class ControleurAccueil {
 
     public function __construct() {
         $this->billet = new Billet();
+        session_start();
     }
 
 // Affiche la liste de tous les billets du blog

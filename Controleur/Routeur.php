@@ -3,6 +3,7 @@
 require_once 'Controleur/ControleurAccueil.php';
 require_once 'Controleur/ControleurBillet.php';
 require_once 'Controleur/ControleurProduit.php';
+require_once 'Controleur/ControleurPanier.php';
 require_once 'Controleur/ControleurLogin.php';
 require_once 'Vue/Vue.php';
 class Routeur {
@@ -11,12 +12,14 @@ class Routeur {
     private $ctrlBillet;
     private $ctrlProduit;
     private $ctrlLogin;
+    private $ctrlPanier;
 
     public function __construct() {
         $this->ctrlAccueil = new ControleurAccueil();
         $this->ctrlBillet = new ControleurBillet();
         $this->ctrlProduit = new ControleurProduit();
         $this->ctrlLogin = new ControleurLogin();
+        $this->ctrlPanier = new ControleurPanier();
 
     }
 
@@ -79,7 +82,11 @@ class Routeur {
                     $contenu = $this->getParametre($_POST, 'contenu');
                     $idBillet = $this->getParametre($_POST, 'id');
                     $this->ctrlBillet->commenter($auteur, $contenu, $idBillet);
+                }else if ($_GET['action'] == 'panier') {
+
+                    $this->ctrlPanier->Panier();
                 }
+
                 else
                     throw new Exception("Action non valide");
             }

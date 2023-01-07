@@ -1,8 +1,6 @@
 
 
 <?php
-session_start();
-
 $value_status = 0;
 if (isset($_SESSION["status"]))
 {
@@ -20,6 +18,8 @@ if (isset($_SESSION["status"]))
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark h-10">
@@ -35,11 +35,25 @@ if (isset($_SESSION["status"]))
                 </li>
                 <li class="nav-item rounded">
                     <a class="nav-link" href="<?=  "index.php?action=produits" ?>">Produits</a>
+
                 </li>
+
                         <?php
                         if($value_status == 2)
                         {
                             ?>
+                            <li class="nav-item rounded">
+                                <a class="nav-link" href="<?=  "index.php?action=panier" ?>"><span class="counted-word">Panier <?php
+                                        if(isset($_SESSION['cart']['quantite'])){
+                                            echo '<span class="count">'.$_SESSION['cart']['quantite'].'</span>';
+                                        }else{
+                                            echo '<span class="count">0</span>';
+                                        }
+                                        ?>
+                                        </span>
+                                </a>
+                            </li>
+                            <li> <span class="sup">3</span></li>
                             <li class="nav-item rounded"><a class="nav-link" href="index.php?action=getDeconnexion">Deconnexion</a></li>
                             <?php
                         }else{
