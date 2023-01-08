@@ -31,13 +31,13 @@ if (isset($_SESSION["status"]))
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-md-auto gap-2">
                 <li class="nav-item rounded">
-                    <a class="nav-link active" aria-current="page" href="<?= "./" ?>">Accueil</a>
+                    <a class="nav-link active" aria-current="page" href="./">Accueil</a>
                 </li>
                 <li class="nav-item rounded">
-                    <a class="nav-link" href="<?=  "index.php?action=histoire" ?>">Histoire</a>
+                    <a class="nav-link" href="index.php?action=histoire">Histoire</a>
                 </li>
                 <li class="nav-item rounded">
-                    <a class="nav-link" href="<?=  "index.php?action=produits" ?>">Produits</a>
+                    <a class="nav-link" href="index.php?action=produits">Produits</a>
                 </li>
 
 
@@ -46,7 +46,7 @@ if (isset($_SESSION["status"]))
                         {
                             ?>
                             <li class="nav-item rounded">
-                                <a class="nav-link" href="<?=  "index.php?action=panier" ?>"><span class="counted-word">Panier <?php
+                                <a class="nav-link" href="index.php?action=panier" ><span class="counted-word">Panier <?php
                                         if(isset($_SESSION['cart']['quantite'])){
                                             echo '<span class="count">'.$_SESSION['cart']['quantite'].'</span>';
                                         }else{
@@ -78,11 +78,27 @@ if (isset($_SESSION["status"]))
     <div id="contenu"  >
         <?= $contenu ?>
     </div> <!-- #contenu -->
-    <footer class="bg-dark text-white">
-        <p class="text-center p-4 m-0">Footer Content</p>
-    </footer>
+    <div class="bg-dark text-white">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-3 bg-dark text-white">
+            <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img src="https://zupimages.net/up/23/01/2u8f.png" style="width: 65px; height: auto;" alt="">
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="./" class="nav-link px-2 text-muted">Accueil</a></li>
+                <li class="nav-item"><a href="index.php?action=cgu" class="nav-link px-2 text-muted">CGU</a></li>
+                <li class="nav-item"><a href="index.php?action=cgv" class="nav-link px-2 text-muted">CGV</a></li>
+
+            </ul>
+        </footer>
+    </div>
+
+
 
 </div> <!-- #global -->
+
 
 </body>
 </html>

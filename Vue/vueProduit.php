@@ -6,7 +6,7 @@
             <?php foreach ($produits as $key => $produit): ?>
                 <div class="col-md-7 mt-5 col-lg-6 col-xl-3 mh-50 <?= $produit['categorie']; ?>">
                     <div class="card text-black">
-                        <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
+                        <i class="fab fa-apple fa-lg "></i>
                         <img src="<?= $produit['image']; ?>"
                              class="card-img-top" alt="Apple Computer" />
                         <div class="card-body">
@@ -16,16 +16,16 @@
                             </div>
 
                             <div class="d-flex justify-content-between total font-weight-bold mt-4">
-                                <span>Total</span><span><?= $produit['prix']; ?>€</span>
+                                <span>Total</span><span><?= number_format($produit['prix'], 2); ?>€</span>
                             </div>
                             <div class="d-flex justify-content-between pt-2">
                                 <div>
-                                    <a href="<?= "index.php?action=produitId&id=".$produit['id']?>" class="btn btn-primary">Voir le produit</a>
+                                    <a href="<?= "index.php?action=produitId&id=".$produit['id']?>" class="btn " style="color: white; background-color: #212529c9; border-color: #1a1e21;">Voir le produit</a>
 
                                 </div>
                                 <div>
-                                    <button onclick="removeToCart(<?=$produit['id']?>)" class="btn btn-primary">-</button>
-                                    <button class="btn btn-primary produit<?= $key+1 ?>" disabled>
+                                    <button onclick="removeToCart(<?=$produit['id']?>)" class="btn " style="color: white; background-color: #212529c9; border-color: #1a1e21;">-</button>
+                                    <button class="btn  produit<?= $key+1 ?>" style="color: white; background-color: #212529c9; border-color: #1a1e21;" disabled>
                                         <?php
                                         if(isset($_SESSION['cart'][$produit['id']]['quantite'])){
                                             echo $_SESSION['cart'][$produit['id']]['quantite'];
@@ -33,7 +33,7 @@
                                             echo '0';
                                         }
                                         ?></button>
-                                    <button onclick="addToCart(<?=$produit['id']?>,'<?=$produit['nom']?>','<?=$produit['description']?>',<?=$produit['prix']?>,'<?=$produit['image']?>')" class="btn btn-primary">+</button>
+                                    <button onclick="addToCart(<?=$produit['id']?>,'<?=$produit['nom']?>','<?=$produit['description']?>',<?=$produit['prix']?>,'<?=$produit['image']?>')" class="btn " style="color: white; background-color: #212529c9; border-color: #1a1e21;">+</button>
                                 </div>
 
 

@@ -77,9 +77,18 @@ $total = 0;
   </div>
   </div>
 </main>
-
+<?php if (!isset($_SESSION['cart']) || sizeof($_SESSION['cart']) <= 4){?>
+    <style>
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+<?php } ?>
 <script> function paiement(){
         Swal.fire({
                 icon: 'success',
              })
-    }</script>
+    }
+</script>
