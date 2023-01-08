@@ -1,4 +1,4 @@
-
+<?php $this->titre = "Boulanger'Ilan - Produit"; ?>
 <section style="background-color: #eee;">
 
     <div class="container py-5 ">

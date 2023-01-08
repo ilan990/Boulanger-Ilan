@@ -1,3 +1,4 @@
+<?php $this->titre = "Boulanger'Ilan - Connexion"; ?>
 <div class="wrapper fadeInDown">
     <div id="formContent">
         <!-- Tabs Titles -->

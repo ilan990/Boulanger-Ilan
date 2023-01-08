@@ -1,4 +1,5 @@
 <?php
+$this->titre = "Boulanger'Ilan - Panier";
 $total = 0;
 ?>
 <main id="cart" style="max-width:960px">

@@ -1,4 +1,6 @@
-<?php foreach($produit as $produit):
+<?php
+$this->titre = "Boulanger'Ilan - Fiche Produit";
+foreach($produit as $produit):
 ?>
 <main id="cart" ">
     <div class="card mb-3" >
