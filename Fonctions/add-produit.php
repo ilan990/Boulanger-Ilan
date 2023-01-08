@@ -37,6 +37,5 @@ $jsonData = json_encode($data);
 // Impression des données au format JSON
 echo $jsonData;
 
-//error_log(print_r($_SESSION,true));
 
 ?>

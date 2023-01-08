@@ -8,7 +8,7 @@ class ControleurAccueil {
         session_start();
     }
 
-// Affiche la liste de tous les billets du blog
+
     public function accueil() {
         $billets = "";
         $vue = new Vue("Accueil");

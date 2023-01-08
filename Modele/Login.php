@@ -17,11 +17,8 @@ class Login extends Modele{
         $autho = $this->executerRequete($sql, array($pseudo, $password));
         if($autho->rowCount() > 0)
         {
-
             $_SESSION["status"] = session_status();
-            // $_SESSION['statut'] = $autho['statut'];
             return true;
-            //   $auth =  $autho['statut'] == 'admin';
         }
         else
         {

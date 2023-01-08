@@ -9,7 +9,7 @@ class ControleurProduit {
         $this->produit = new Produit();
     }
 
-// Affiche la liste de tous les billets du blog
+
     public function Produits() {
         $produits = $this->produit->getProduits();
         $vue = new Vue("Produit");

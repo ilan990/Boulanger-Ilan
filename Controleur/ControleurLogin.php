@@ -9,7 +9,6 @@ class ControleurLogin
     public function __construct()
     {
         $this->login = new Login();
-        //session_start();
     }
     public function cnx()
     {
@@ -26,7 +25,6 @@ class ControleurLogin
         if($_SESSION['status'] == 2)
         {
             header("location:./");
-            // session_start();
         }
         else{
             header("location:./index.php?action=connexion");
@@ -34,12 +32,7 @@ class ControleurLogin
     }
     public function getDeconnexion()
     {
-        // session_start();
-        // session_unset();
-        // session_destroy();
-        // $_SESSION = array();
 
         header("location:./");
-        // exit();
     }
 }
