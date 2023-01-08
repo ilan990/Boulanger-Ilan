@@ -28,7 +28,7 @@ $total = 0;
             <p class="cartItemQuantity p-1 text-center"><?php echo $produit['quantite'];?></p>
           </div>
           <div class="col-2">
-            <p id="cartItem1Price"><?php echo $produit['prix'];?>0€</p>
+            <p id="cartItem1Price"><?php echo number_format($produit['prix'], 2);?>€</p>
           </div>
         </div>
         <hr>
@@ -41,7 +41,7 @@ $total = 0;
             <h6>Subtotal</h6>
           </div>
           <div class="col-sm-4 p-0">
-            <p id="subtotal"><?php echo $total; ?>0€</p>
+            <p id="subtotal"><?php echo number_format($total, 2); ?>€</p>
           </div>
         </div>
           <div class="row m-0">
@@ -49,7 +49,7 @@ $total = 0;
                   <h6>Frais de service</h6>
               </div>
               <div class="col-sm-4 p-0">
-                  <p id="tax"><?php echo $total*0.1; ?>€</p>
+                  <p id="tax"><?php echo number_format($total*0.1, 2); ?>€</p>
               </div>
           </div>
         <div class="row m-0">
@@ -57,7 +57,7 @@ $total = 0;
             <h6>Livraison</h6>
           </div>
           <div class="col-sm-4 p-0">
-            <p id="tax">4.00€</p>
+            <p id="tax">3.99€</p>
           </div>
         </div>
 
@@ -67,7 +67,7 @@ $total = 0;
             <h5>Total</h5>
           </div>
           <div class="col-sm-4 p-0">
-            <p id="total"><?php echo $total+4+$total*0.1 ?>€</p>
+            <p id="total"><?php echo number_format($total+3.99+$total*0.1, 2); ?>€</p>
           </div>
         </div>
         <a href="#"><button onclick="paiement()" id="btn-checkout" class="shopnow"><span>Paiement</span></button></a>
@@ -76,11 +76,9 @@ $total = 0;
   </div>
   </div>
 </main>
-<footer class="container">
-</footer>
+
 <script> function paiement(){
         Swal.fire({
                 icon: 'success',
              })
     }</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>

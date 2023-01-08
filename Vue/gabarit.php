@@ -34,9 +34,12 @@ if (isset($_SESSION["status"]))
                     <a class="nav-link active" aria-current="page" href="<?= "./" ?>">Accueil</a>
                 </li>
                 <li class="nav-item rounded">
-                    <a class="nav-link" href="<?=  "index.php?action=produits" ?>">Produits</a>
-
+                    <a class="nav-link" href="<?=  "index.php?action=histoire" ?>">Histoire</a>
                 </li>
+                <li class="nav-item rounded">
+                    <a class="nav-link" href="<?=  "index.php?action=produits" ?>">Produits</a>
+                </li>
+
 
                         <?php
                         if($value_status == 2)
@@ -72,10 +75,14 @@ if (isset($_SESSION["status"]))
 </nav>
 <div id="global" >
 
-    <div id="contenu" >
+    <div id="contenu"  >
         <?= $contenu ?>
     </div> <!-- #contenu -->
+    <footer class="bg-dark text-white">
+        <p class="text-center p-4 m-0">Footer Content</p>
+    </footer>
 
 </div> <!-- #global -->
+
 </body>
 </html>

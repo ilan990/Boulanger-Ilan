@@ -1,8 +1,8 @@
 
 <section style="background-color: #eee;">
 
-    <div class="container py-5">
-        <div class="row justify-content-center">
+    <div class="container py-5 ">
+        <div class="row justify-content-center mb-5">
             <?php foreach ($produits as $key => $produit): ?>
                 <div class="col-md-7 mt-5 col-lg-6 col-xl-3 mh-50 <?= $produit['categorie']; ?>">
                     <div class="card text-black">

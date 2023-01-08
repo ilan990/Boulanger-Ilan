@@ -85,6 +85,12 @@ class Routeur {
                 }else if ($_GET['action'] == 'panier') {
 
                     $this->ctrlPanier->Panier();
+                }else if($_GET['action'] == 'histoire'){
+                    $this->ctrlAccueil->histoire();
+                }else if($_GET['action'] == 'cgv'){
+                    $this->ctrlAccueil->CGV();
+                }else if($_GET['action'] == 'cgu'){
+                    $this->ctrlAccueil->CGU();
                 }
 
                 else
