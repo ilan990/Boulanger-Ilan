@@ -22,8 +22,6 @@ class ControleurLogin
     {
 
         $this->login->getAutho($pseudo, $password);
-        session_start();
-        $_SESSION["status"] = session_status();
 
         if($_SESSION['status'] == 2)
         {

@@ -12,20 +12,20 @@ class Login extends Modele{
 
     public function getAutho($pseudo, $password)
     {
+
         $sql = 'select * from register where username = ? and password = ?';
         $autho = $this->executerRequete($sql, array($pseudo, $password));
-        if($autho->rowCount() >0)
+        if($autho->rowCount() > 0)
         {
-            echo 'autho trouver';
+
+            $_SESSION["status"] = session_status();
             // $_SESSION['statut'] = $autho['statut'];
-            return $autho;
-
+            return true;
             //   $auth =  $autho['statut'] == 'admin';
-
         }
         else
         {
-            session_destroy();
+
             session_unset();
             echo ' utilisateur && password introuvable ';
         }
