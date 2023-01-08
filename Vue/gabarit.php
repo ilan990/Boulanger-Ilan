@@ -31,7 +31,7 @@ if (isset($_SESSION["status"]))
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-md-auto gap-2">
                 <li class="nav-item rounded">
-                    <a class="nav-link active" aria-current="page" href="./">Accueil</a>
+                    <a class="nav-link active" aria-current="page" href="index.php?action=accueil">Accueil</a>
                 </li>
                 <li class="nav-item rounded">
                     <a class="nav-link" href="index.php?action=histoire">Histoire</a>

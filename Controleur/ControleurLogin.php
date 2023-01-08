@@ -1,10 +1,5 @@
 <?php
-
-
-
-
-require_once 'Modele/Login.php';
-require_once 'Vue/Vue.php';
+require_once 'autoload.php';
 
 class ControleurLogin
 

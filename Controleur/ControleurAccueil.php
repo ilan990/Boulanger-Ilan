@@ -1,14 +1,10 @@
 <?php
-
-require_once 'Modele/Billet.php';
-require_once 'Vue/Vue.php';
+require_once 'autoload.php';
 
 class ControleurAccueil {
 
-    private $billet;
 
     public function __construct() {
-        $this->billet = new Billet();
         session_start();
     }
 

@@ -1,22 +1,15 @@
 <?php
-
-require_once 'Controleur/ControleurAccueil.php';
-require_once 'Controleur/ControleurBillet.php';
-require_once 'Controleur/ControleurProduit.php';
-require_once 'Controleur/ControleurPanier.php';
-require_once 'Controleur/ControleurLogin.php';
+require_once 'autoload.php';
 require_once 'Vue/Vue.php';
 class Routeur {
 
     private $ctrlAccueil;
-    private $ctrlBillet;
     private $ctrlProduit;
     private $ctrlLogin;
     private $ctrlPanier;
 
     public function __construct() {
         $this->ctrlAccueil = new ControleurAccueil();
-        $this->ctrlBillet = new ControleurBillet();
         $this->ctrlProduit = new ControleurProduit();
         $this->ctrlLogin = new ControleurLogin();
         $this->ctrlPanier = new ControleurPanier();
@@ -27,15 +20,7 @@ class Routeur {
     public function routerRequete() {
         try {
             if (isset($_GET['action'])) {
-                if ($_GET['action'] == 'billet') {
-                    $idBillet = intval($this->getParametre($_GET, 'id'));
-                    if ($idBillet != 0) {
-                        $this->ctrlBillet->billet($idBillet);
-                    }
-                    else
-                        throw new Exception("Identifiant de billet non valide");
-                }
-                else if($_GET['action']=='produits')
+                 if($_GET['action']=='produits')
                 {
                     $this->ctrlProduit->Produits();
                 }
@@ -77,12 +62,7 @@ class Routeur {
                     session_unset();
                     $this->ctrlLogin->getDeconnexion();
                 }
-                else if ($_GET['action'] == 'commenter') {
-                    $auteur = $this->getParametre($_POST, 'auteur');
-                    $contenu = $this->getParametre($_POST, 'contenu');
-                    $idBillet = $this->getParametre($_POST, 'id');
-                    $this->ctrlBillet->commenter($auteur, $contenu, $idBillet);
-                }else if ($_GET['action'] == 'panier') {
+                else if ($_GET['action'] == 'panier') {
 
                     $this->ctrlPanier->Panier();
                 }else if($_GET['action'] == 'histoire'){
@@ -91,6 +71,9 @@ class Routeur {
                     $this->ctrlAccueil->CGV();
                 }else if($_GET['action'] == 'cgu'){
                     $this->ctrlAccueil->CGU();
+                }else if($_GET['action']=='accueil')
+                {
+                    $this->ctrlAccueil->accueil();
                 }
 
                 else
