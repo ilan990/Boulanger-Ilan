@@ -82,7 +82,6 @@
             },
             success: function(response){
                 response=JSON.parse(response)
-                console.log(response);
                 $('.produit'+articleId).text(response.quantiteProduit);
                 $('.count').text(response.quantiteMax)
 
