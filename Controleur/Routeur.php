@@ -58,8 +58,8 @@ class Routeur {
                 {
                     session_start();
                     $_SESSION= [];
-                    session_destroy();
                     session_unset();
+                    session_destroy();
                     $this->ctrlLogin->getDeconnexion();
                 }
                 else if ($_GET['action'] == 'panier') {

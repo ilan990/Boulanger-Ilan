@@ -1,10 +1,7 @@
 <?php $this->titre = "Boulanger'Ilan - CGV"; ?>
 
-<div class="container">
+<div class="container" style="transform: scale(.9);">
     <h1>Conditions générales de vente</h1>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor, nisl a imperdiet sollicitudin, nisi ipsum malesuada nunc, non viverra metus felis non tellus. Aliquam erat volutpat. Suspendisse potenti. In ultricies vehicula orci, vel ultricies ipsum facilisis vel.
-    </p>
 
     <h2>Article 1 : Objet</h2>
     <p>

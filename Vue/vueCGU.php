@@ -1,6 +1,6 @@
 <?php $this->titre = "Boulanger'Ilan - CGU"; ?>
 
-<div class="container" >
+<div class="container" style="transform: scale(.9);" >
     <h1>Conditions générales d'utilisation</h1>
 
     <h2>Article 1 : Objet</h2>

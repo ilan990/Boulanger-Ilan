@@ -23,19 +23,21 @@
                                     <a href="<?= "index.php?action=produitId&id=".$produit['id']?>" class="btn " style="color: white; background-color: #212529c9; border-color: #1a1e21;">Voir le produit</a>
 
                                 </div>
-                                <div>
-                                    <button onclick="removeToCart(<?=$produit['id']?>)" class="btn " style="color: white; background-color: #212529c9; border-color: #1a1e21;">-</button>
-                                    <button class="btn  produit<?= $key+1 ?>" style="color: white; background-color: #212529c9; border-color: #1a1e21;" disabled>
-                                        <?php
-                                        if(isset($_SESSION['cart'][$produit['id']]['quantite'])){
-                                            echo $_SESSION['cart'][$produit['id']]['quantite'];
-                                        }else{
-                                            echo '0';
-                                        }
-                                        ?></button>
-                                    <button onclick="addToCart(<?=$produit['id']?>,'<?=$produit['nom']?>','<?=$produit['description']?>',<?=$produit['prix']?>,'<?=$produit['image']?>')" class="btn " style="color: white; background-color: #212529c9; border-color: #1a1e21;">+</button>
-                                </div>
-
+                                <?php
+                                if(!empty($_SESSION)){ ?>
+                                    <div>
+                                        <button onclick="removeToCart(<?=$produit['id']?>)" class="btn " style="color: white; background-color: #212529c9; border-color: #1a1e21;">-</button>
+                                        <button class="btn  produit<?= $key+1 ?>" style="color: white; background-color: #212529c9; border-color: #1a1e21;" disabled>
+                                            <?php
+                                            if(isset($_SESSION['cart'][$produit['id']]['quantite'])){
+                                                echo $_SESSION['cart'][$produit['id']]['quantite'];
+                                            }else{
+                                                echo '0';
+                                            }
+                                            ?></button>
+                                        <button onclick="addToCart(<?=$produit['id']?>,'<?=$produit['nom']?>','<?=$produit['description']?>',<?=$produit['prix']?>,'<?=$produit['image']?>')" class="btn " style="color: white; background-color: #212529c9; border-color: #1a1e21;">+</button>
+                                    </div>
+                                <?php } ?>
 
 
                             </div>
