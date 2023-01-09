@@ -1,5 +1,5 @@
 <?php $this->titre = "Boulanger'Ilan - Histoire"; ?>
-<section class="container">
+<section class="container mt-5">
     <div class="grid-flex ">
         <div class="col col-image" style="background-image: url(https://images.lanouvellerepublique.fr/image/upload/t_1020w/5f1394cacc4e4705038b47fb.jpg);">
         </div>
