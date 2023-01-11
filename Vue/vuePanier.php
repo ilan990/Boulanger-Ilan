@@ -94,11 +94,9 @@ $total = 0;
                 type: 'POST',
                 data: {},
                 success: function (response) {
-                    response = JSON.parse(response);
-
-                    window.location.reload();
 
                     $('.count').text(response.quantiteMax)
+
 
                 }
             });
@@ -115,6 +113,11 @@ $total = 0;
             Swal.fire({
                 icon: 'success',
             })
+        setTimeout(reload,1500)
 
+
+    }
+    function reload(){
+        window.location.reload();
     }
 </script>

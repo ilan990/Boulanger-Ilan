@@ -433,7 +433,7 @@ h4 {
     transition: all 0.5s;
 }
 .shopnow span:after {
-    content: url("https://badux.co/smc/codepen/caticon.png");
+
     position: absolute;
     font-size: 30px;
     opacity: 0;
