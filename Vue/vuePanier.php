@@ -6,7 +6,7 @@ $total = 0;
   <h1>Panier</h1>
   <div class="container-fluid">
     <div class="row align-items-start">
-      <div class="col-12 col-sm-8 items">
+      <div class="col-12 col-sm-8 items ">
         <!--1-->
           <?php
           if (isset($_SESSION['cart'])){
@@ -16,7 +16,7 @@ $total = 0;
                       $total += $produit['prix'] * $produit['quantite'];
 
           ?>
-        <div class="cartItem row align-items-start">
+        <div class="cartItem row align-items-start paiement">
           <div class="col-3 mb-2">
             <img class="w-100" src="<?=$produit['img']?>" alt="art image">
           </div>
@@ -32,7 +32,7 @@ $total = 0;
             <p id="cartItem1Price"><?php echo number_format($produit['prix'], 2);?>€</p>
           </div>
         </div>
-        <hr>
+        <hr class="paiement">
         <?php }}}}?>
         <!--fin de 1-->
       </div>
@@ -87,8 +87,34 @@ $total = 0;
     </style>
 <?php } ?>
 <script> function paiement(){
-        Swal.fire({
+
+            // $('.affiche'+articleId).remove();
+            $.ajax({
+                url: 'Fonctions/remove-all.php',
+                type: 'POST',
+                data: {},
+                success: function (response) {
+                    response = JSON.parse(response);
+
+                    window.location.reload();
+
+                    $('.count').text(response.quantiteMax)
+
+                }
+            });
+
+            $('.paiement').remove();
+            $('.count').text("0");
+            $('#subtotal').text("0.00€");
+            $('#tax').text("0.00€");
+            $('#total').text("3.99€");
+
+            // window.location.reload();
+
+
+            Swal.fire({
                 icon: 'success',
-             })
+            })
+
     }
 </script>
