@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : dim. 08 jan. 2023 à 22:34
+-- Généré le : mer. 11 jan. 2023 à 15:24
 -- Version du serveur : 8.0.29
 -- Version de PHP : 8.1.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `monblog`
+-- Base de données : `boulangerilan`
 --
 
 -- --------------------------------------------------------
@@ -69,7 +69,8 @@ CREATE TABLE `register` (
 --
 
 INSERT INTO `register` (`id`, `username`, `password`) VALUES
-(1, 'ilan', 'root');
+(1, 'ilan', 'root'),
+(2, 'demo', 'demo');
 
 --
 -- Index pour les tables déchargées
@@ -101,7 +102,7 @@ ALTER TABLE `produits`
 -- AUTO_INCREMENT pour la table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
